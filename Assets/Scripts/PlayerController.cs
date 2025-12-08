@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public float maxSpeed = 5f;
     public GameObject boosterFlame;
+    private float elapsedTime = 0f;
+    private float score = 0f;
+    public float scoreMultiplier = 10f;
 
     void Start()
     {
@@ -15,7 +18,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.leftButton.isPressed)
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+        Debug.Log("Score: " + score);
+        if (Mouse.current.leftButton.isPressed) 
         {
             // Calculate mouse direction
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
