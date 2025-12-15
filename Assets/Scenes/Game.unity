@@ -1501,6 +1501,7 @@ MonoBehaviour:
   scoreMultiplier: 10
   thrustForce: 5
   uiDocument: {fileID: 273811227}
+  explosionEffect: {fileID: 492092397450477201, guid: 3df93dca3cf274cda818a7d51c82cfa2, type: 3}
 --- !u!1 &1572582995
 GameObject:
   m_ObjectHideFlags: 0
