@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,50 +15,53 @@ public class PlayerController : MonoBehaviour
 
     public UIDocument uiDocument;
     private Label scoreText;
+    private Button restartButton;
+
     public GameObject explosionEffect;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
+        restartButton.style.display = DisplayStyle.None;
+        restartButton.clicked += ReloadScene;
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        void UpdateScore()
-            {
-            elapsedTime += Time.deltaTime;
-            score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
-            scoreText.text = "Score: " + score;
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+        scoreText.text = "Score: " + score;
 
-            }
-        void MovePlayer()
-            {
-            if (Mouse.current.leftButton.isPressed)
-            {
+        if (Mouse.current.leftButton.isPressed)
+        {
 
-                // Calculate mouse direction
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
-                Vector2 direction = (mousePos - transform.position).normalized;
+            // Calculate mouse direction
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+            Vector2 direction = (mousePos - transform.position).normalized;
 
-                // Move player in direction of mouse
-                transform.up = direction;
-                rb.AddForce(direction * thrustForce);
-            }
+            // Move player in direction of mouse
+            transform.up = direction;
+            rb.AddForce(direction * thrustForce);
 
-            }
-        UpdateScore();
-        MovePlayer();
-      
-
-
+        }
 
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        restartButton.style.display = DisplayStyle.Flex;
+
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
