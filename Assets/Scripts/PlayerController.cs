@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private Button restartButton;
 
     public GameObject explosionEffect;
-
+    public GameObject borderParent;
+    public GameObject boosterFlame;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,6 +50,17 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            boosterFlame.SetActive(true);
+        }
+        else if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            boosterFlame.SetActive(false);
+        }
+
+
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -56,6 +68,7 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
+        borderParent.SetActive(false);
 
     }
 

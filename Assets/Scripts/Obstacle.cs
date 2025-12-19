@@ -24,4 +24,12 @@ public class Obstacle : MonoBehaviour
         float randomTorque = Random.Range(-maxSpinSpeed, maxSpinSpeed);
         rb.AddTorque(randomTorque);
     }
+
+    void FixedUpdate()
+    {
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }
+    }
 }
