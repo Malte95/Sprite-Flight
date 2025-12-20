@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public GameObject explosionEffect;
     public GameObject borderParent;
     public GameObject boosterFlame;
+    public InputAction moveForward;
+    public InputAction lookPosition;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
+        moveForward.Enable();
+        lookPosition.Enable();
 
     }
 
@@ -37,11 +41,11 @@ public class PlayerController : MonoBehaviour
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
         scoreText.text = "Score: " + score;
 
-        if (Mouse.current.leftButton.isPressed)
+        if (moveForward.IsPressed())
         {
 
             // Calculate mouse direction
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(lookPosition.ReadValue<Vector2>());
             Vector2 direction = (mousePos - transform.position).normalized;
 
             // Move player in direction of mouse
@@ -50,11 +54,11 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (moveForward.WasPressedThisFrame())
         {
             boosterFlame.SetActive(true);
         }
-        else if (Mouse.current.leftButton.wasReleasedThisFrame)
+        else if (moveForward.WasReleasedThisFrame())
         {
             boosterFlame.SetActive(false);
         }

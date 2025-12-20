@@ -11019,6 +11019,40 @@ MonoBehaviour:
   explosionEffect: {fileID: 492092397450477201, guid: 3df93dca3cf274cda818a7d51c82cfa2, type: 3}
   borderParent: {fileID: 338847316}
   boosterFlame: {fileID: 1572582995}
+  moveForward:
+    m_Name: Move Forward
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 347a43ff-654c-4540-9387-5c781c568caf
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d971a7c1-629d-4be2-bca0-82a71f4273ca
+      m_Path: <Pointer>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Forward
+      m_Flags: 0
+    m_Flags: 0
+  lookPosition:
+    m_Name: Look Position
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 24128c8d-b6f0-4cdf-b2b8-6f0fa5020247
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c35e6498-9846-46ad-9880-1e5fdfb9e8d4
+      m_Path: <Pointer>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Position
+      m_Flags: 0
+    m_Flags: 0
 --- !u!212 &1409438622
 SpriteRenderer:
   m_ObjectHideFlags: 0
