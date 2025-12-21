@@ -2,9 +2,7 @@
 
 > A small Unity game where you control a spaceship flying through an asteroid field.  
 > Dodge asteroids and try to survive as long as possible!
-
-![Gameplay Screenshot](./docs/screenshot1.png)
-![Gameplay GIF](./docs/gameplay.gif)
+![Screenshot](https://github.com/user-attachments/assets/73030441-01d4-4043-9de0-0129eb7d5fa5)
 
 ## ▶️ Play in Browser (WebGL) 
 [https://malte95.github.io/Asteroid-Fields/](https://malte95.github.io/Asteroid-Fields/)
