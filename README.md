@@ -6,9 +6,8 @@
 ![Gameplay Screenshot](./docs/screenshot1.png)
 ![Gameplay GIF](./docs/gameplay.gif)
 
-## ▶️ Play in Browser (WebGL)
-👉 If you publish a WebGL build, add the link here:  
-https://malte95.github.io/Asteroid-Fields/
+## ▶️ Play in Browser (WebGL) 
+[https://malte95.github.io/Asteroid-Fields/](https://malte95.github.io/Asteroid-Fields/)
 
 
 ---
