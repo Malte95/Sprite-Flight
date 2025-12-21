@@ -1,7 +1,7 @@
 # Asteroid Fields
 
 > A small Unity game where you control a spaceship flying through an asteroid field.  
-> Dodge or destroy asteroids and try to survive as long as possible!
+> Dodge asteroids and try to survive as long as possible!
 
 ![Gameplay Screenshot](./docs/screenshot1.png)
 ![Gameplay GIF](./docs/gameplay.gif)
