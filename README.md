@@ -10,7 +10,6 @@
 👉 If you publish a WebGL build, add the link here:  
 https://malte95.github.io/Asteroid-Fields/
 
-> Recruiters can play the game directly in the browser – no setup required.
 
 ---
 
@@ -21,12 +20,10 @@ https://malte95.github.io/Asteroid-Fields/
 - 🎵 Sound effects and simple UI
 - 🛠️ Basic 3D physics interactions
 
-*(Adjust this list to exactly match your implementation.)*
 
 ---
 
 ## 🧠 What I learned
-This project builds on fundamentals similar to Unity’s official beginner 2D game course, where you learn to:
 
 - Set up and navigate Unity projects and scenes  
 - Use physics and colliders to make GameObjects interactive  
@@ -36,11 +33,5 @@ This project builds on fundamentals similar to Unity’s official beginner 2D ga
 - Build a scoring system and restart logic  
 - Implement basic UI elements for score and status
 
-These skills are core techniques taught in Unity’s *2D Beginner Game: Sprite Flight* tutorial, which guides through building a full game from scratch (player control, obstacles, scoring, UI, and publishing). :contentReference[oaicite:2]{index=2}
 
 ---
-
-## 🚀 Quick Start (for Recruiters & Developers)
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Malte95/Asteroid-Fields.git
