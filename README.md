@@ -24,7 +24,6 @@ https://malte95.github.io/Asteroid-Fields/
 ---
 
 ## 🧠 What I learned
-
 - Set up and navigate Unity projects and scenes  
 - Use physics and colliders to make GameObjects interactive  
 - Write C# scripts to control movement and gameplay  
@@ -32,6 +31,17 @@ https://malte95.github.io/Asteroid-Fields/
 - Create obstacle behaviors and randomness  
 - Build a scoring system and restart logic  
 - Implement basic UI elements for score and status
+
+
+---
+
+## 🕹️ How to Play
+- 🖱️ **Left Mouse Click** to move the spaceship upward
+- 🖱️ **Release the mouse button** to let the ship fall
+- 💥 Avoid incoming asteroids
+- 🏆 Try to survive as long as possible and achieve a high score
+
+> Click inside the game window to focus the controls.
 
 
 ---
